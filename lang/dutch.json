@@ -25,18 +25,18 @@
   "DATES": {
     "months": {
       "short": {
-        "jan": "jan.",
-        "feb": "feb.",
-        "mar": "mrt.",
-        "apr": "apr.",
+        "jan": "jan",
+        "feb": "feb",
+        "mar": "mrt",
+        "apr": "apr",
         "may": "mei",
-        "jun": "jun.",
-        "jul": "jul.",
-        "aug": "aug.",
-        "sep": "sep.",
-        "oct": "okt.",
-        "nov": "nov.",
-        "dec": "dec."
+        "jun": "jun",
+        "jul": "jul",
+        "aug": "aug",
+        "sep": "sep",
+        "oct": "okt",
+        "nov": "nov",
+        "dec": "dec"
       },
       "long": {
         "january": "januari",
