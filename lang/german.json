@@ -26,14 +26,14 @@
       "months": {
         "short": {
           "jan": "jan",
-          "feb": "feb",
-          "mar": "mär",
+          "feb": "febr",
+          "mar": "mrz",
           "apr": "apr",
           "may": "mai",
           "jun": "jun",
           "jul": "jul",
           "aug": "aug",
-          "sep": "sep",
+          "sep": "sept",
           "oct": "okt",
           "nov": "nov",
           "dec": "dez"
@@ -55,22 +55,22 @@
       },
       "weekdays": {
         "short": {
-          "mon": "mo",
-          "thu": "do",
           "sun": "so",
+          "mon": "mo",
           "tue": "di",
-          "fri": "fr",
           "wed": "mi",
+          "thu": "do",
+          "fri": "fr",
           "sat": "sa"
         },
         "long": {
-          "monday": "montag",
-          "thursday": "donnerstag",
           "sunday": "sonntag",
+          "monday": "montag",
           "tuesday": "dienstag",
-          "friday": "freitag",
           "wednesday": "mittwoch",
-          "saturday": "samstag"
+          "thursday": "donnerstag",
+          "friday": "freitag",
+          "saturday": "samstag
         }
       }
     }
