@@ -55,21 +55,21 @@
     },
     "weekdays": {
       "short": {
-        "mon": "lun",
-        "thu": "gio",
         "sun": "dom",
+        "mon": "lun",
         "tue": "mar",
-        "fri": "ven",
         "wed": "mer",
+        "thu": "gio",
+        "fri": "ven",
         "sat": "sab"
       },
       "long": {
-        "monday": "lunedì",
-        "thursday": "giovedì",
         "sunday": "domenica",
+        "monday": "lunedì",
         "tuesday": "martedì",
-        "friday": "venerdì",
         "wednesday": "mercoledì",
+        "thursday": "giovedì",
+        "friday": "venerdì",
         "saturday": "sabato"
       }
     }
