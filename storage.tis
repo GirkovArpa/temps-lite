@@ -29,8 +29,63 @@ $(#trayicon-weather) << event click {
   root.WEATHER_IN_TRAY_ICON = !this.state.checked; 
   updateTrayIcon();
 };
+
+async function createDir(path){
+  await System.mkdir(path);
+}
+
 $(#autostart) << event click { 
   root.START_ON_LOGIN = this.state.checked;
+  switch(System.PLATFORM) {
+    case #Windows:
+    break;
+    
+    case #OSX:
+    break;
+    
+    case #Linux:
+    {
+      const autodir = System.path(#USER_HOME,".config/autostart");
+      if(!System.scanFiles(autodir)) {
+        createDir(autodir);
+      }
+      const path = System.path(#USER_HOME,".config/autostart/temps-lite.desktop");
+      
+      //TODO: Check .state.checked value is opposite of button|checkbox here
+      //debug info: this.state.checked;
+      if(!this.state.checked) {
+        const appName = "temps-lite";
+        const appPath = URL.toPath(self.url("./scapp"));
+        const data = String.$([Desktop Entry]
+            Type=Application
+            Version=1.0
+            Name={appName}
+            Comment={appName} autostart script
+            Exec={appPath}
+            StartupNotify=false
+            Terminal=false
+        )
+        const stream = Stream.openFile(path,"uw");    
+        if( !stream ) {
+          view.msgbox(#warning, "Cannot open file "+ path +" for writing. Settings will not be saved." );
+          return;
+        }
+        stream.printf("%s",data);
+        stream.close();
+      }
+      else {
+        System.unlink(path)
+          .then(
+            :: root.START_ON_LOGIN = false
+          )
+          .catch(function err(e){
+             throw String.$(Cant unlink/remove {path} );
+          });
+      }
+    }  
+    break;
+  }
+
 };
 
 $(#city).value = root.LOCATION;
