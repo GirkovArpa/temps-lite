@@ -2,17 +2,11 @@ var LANGUAGES_LOADED = false;
 const TRANSLATIONS = { list: [] };
 
 async function loadLanguages() {
-  const [json] = await view.request {
-    output: #json,
-    url: "lang/list.json",
-  };
+  const json = parseData(Stream.openFile("locale/list.json", "ru"));
   json.sort();
   for (var language in json) {
     TRANSLATIONS.list.push(language);
-    const [translation] = await view.request { 
-      url: String.$(lang/{language.toLowerCase()}.json),
-      output: #json
-    };
+    const translation = parseData(Stream.openFile("locale/" + language.toLowerCase() + ".json", "ru"));
     translation.FULL = language;
     const { ABBR } = translation;
     TRANSLATIONS[ABBR] = translation;

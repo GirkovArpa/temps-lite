@@ -1,7 +1,5 @@
+target
 *.exe
+*.dll
 *.bin
-*.txt
-dist
-build
-dev
-*.lnk
+*test*

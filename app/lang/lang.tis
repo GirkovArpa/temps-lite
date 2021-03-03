@@ -4,6 +4,7 @@ $(#lang) << event change {
 }
 
 function formatCurrentDate(xlation, weekday, month, day) {
+  if (typeof weekday !== #string) return;
   const format = xlation["CURRENT-DATE-FORMAT"];
   return format
     .replace("WEEKDAY", weekday)

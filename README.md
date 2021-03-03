@@ -1,6 +1,6 @@
 <h1 align="center">
 <a href="https://github.com/girkovarpa/temps-lite">
-<img src="assets/app.png" alt="temps-lite" width="200"/></a><br/><br/>
+<img src="app/assets/app.png" alt="temps-lite" width="200"/></a><br/><br/>
 temps-lite
 <br/>
 <br/>
@@ -41,17 +41,17 @@ temps-lite
 - [ ] Interactive hourly weather graph
 - [ ] Timezone support
 - [ ] Shortcut Key support
-- [ ] Autostart on login
+- [x] Autostart on login
 - [ ] Move animations below forecasts layer
 - [ ] Fix Apply/Quit button transitions
 
-## Usage ▶️
+## Building ▶️
 
-Download the [Quark](https://quark.sciter.com/) executable corresponding to your operating system from the [Releases](https://github.com/GirkovArpa/temps-lite/releases).  If it's not available, simply run the appropriate Sciter binary inside this folder.  They can be downloaded [here](https://github.com/c-smile/sciter-sdk) under `bin.lnx`, `bin.osx`, or `bin.win`.
-
-For example, on Windows, you could download [scapp.exe](https://github.com/c-smile/sciter-sdk/blob/master/bin.win/x32/scapp.exe), place it in this folder, and double-click it.  That's all there is to it!
-
-On Linux, the process is similar.  Simply run [scapp](https://github.com/c-smile/sciter-sdk/blob/master/bin.lnx/x64/scapp) inside this folder, if your operating system is 64-bit.
+Compiling with Rust is fairly straightforward:
+```sh
+cargo build --release
+```
+When running, the folder [locale](locale) must be in the same folder as the executable, and the [Sciter](https://github.com/c-smile/sciter-sdk/) library from either `bin.win`, `bin.lnx`, or `bin.osx` must be in the folder as well, or in your `PATH`.
 
 ## Location
 
@@ -59,20 +59,15 @@ Normally it is very straightforward to enter your location into the settings win
 
 Even more granular: The weather above your home! Go for example to [OpenStreetMap](https://www.openstreetmap.org/#map=6/51.330/10.453) and enter your home address. The map of your location will appear. Look for your house/apartment and right-click on it. Select 'Show address' from the menu. You will see the geocoordinates of it on the left side of the window. Copy them and paste them into the settings window of temps-lite. Delete everything from the insertion except for the numbers separated by either a comma or a space. Click 'Apply', and that's it!
 
-## Bugs 🐛
+## Notes ⚠️
 
 <details>
   <summary>Linux Font Installation</summary>
   
-  On Linux, a console window may appear with the following error message:
-  
-  > warning:css: in @font-face statement, failed to install font at ...
-
-  To resolve this issue, please install the fonts [Rubik Regular 400](assets/fonts/rubik/Rubik\%20Regular\%20400.ttf) & [Rubik Bold 700](assets/fonts/rubik/Rubik\%20Bold\%20700.ttf) manually, then delete (or comment-out) line `6` from [main.htm](main.htm):
-
-  ```html
-  <link href="rubik.css" rel="stylesheet">
-  ```
+  Please manually install the following fonts from [this](app/assets/fonts/rubik/) folder:
+  - **Rubik Regular 400**
+  - **Rubik Light 300**
+  - **Rubik Bold 700**
 </details>
 
 ## History 📜

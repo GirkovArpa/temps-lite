@@ -87,13 +87,16 @@ input[type=text] {
   padding-bottom: 2dip;
   margin: 0;
   border-color: #999;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-radius: 0;
+  border-top-width: 0dip;
+  border-left-width: 0dip;
+  border-right-width: 0dip;
+  border-radius: 0dip;
   border-bottom-width: 1dip;
   text-align: left;
   font-size: 16dip;
+  outline: 1px solid white;
+  outline-offset: -1dip;
+  border-bottom: 2px solid #999;
 }
 
 #city, #lang {
@@ -116,4 +119,8 @@ button[type=radio]:not(.time-format) {
 
 black {
   color: black;
+}
+
+#autostart, #trayicon-weather {
+  behavior: clickable;
 }

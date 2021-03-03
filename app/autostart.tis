@@ -1,0 +1,59 @@
+async function manageAutoStart(checked) {
+  switch(System.PLATFORM) {
+    case #Windows:
+      view.createWindowsShortcut(checked);
+      root.START_ON_LOGIN = checked;
+    break;
+    
+    case #OSX:
+    break;
+    
+    case #Linux:
+    {
+      const autodir = System.path(#USER_HOME, ".config/autostart");
+      if(!System.scanFiles(autodir)) {
+        await System.mkdir(autodir);
+      }
+      const path = System.path(#USER_HOME,".config/autostart/temps-lite.desktop");
+      
+      //TODO: Check .state.checked value is opposite of button|checkbox here
+      //debug info: this.state.checked;
+      if(checked) {
+        const appName = "temps-lite";
+        const appPath = URL.toPath(System.home("./temps-lite-rust"));
+        const data = String.$([Desktop Entry]
+            Type=Application
+            Version=1.0
+            Name={appName}
+            Comment={appName} A simple but smart weather app. 
+            Exec={appPath}
+            StartupNotify=false
+            Terminal=false
+        )
+        const stream = Stream.openFile(path,"uw");    
+        if( !stream ) {
+          view.msgbox(#warning, "Cannot open file "+ path +" for writing. Settings will not be saved." );
+          return;
+        }
+        stream.printf("%s",data);
+        stream.close();
+        root.START_ON_LOGIN = true;
+      }
+      else {
+        System.unlink(path)
+          .then(
+            :: root.START_ON_LOGIN = false
+          )
+          .catch(function err(e){
+             throw String.$(Cant unlink/remove {path} );
+          });
+      }
+    }  
+    break;
+  }
+
+}
+
+$(#autostart) << event click { 
+  manageAutoStart(!this.state.checked);
+}

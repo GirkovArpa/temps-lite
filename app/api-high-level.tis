@@ -214,21 +214,22 @@ async function refresh() {
   const units = $(#C).state.checked ? "metric" : "imperial";
   const _location = $(#city).value;
   const api_key = $(#api-key).value;
-  if (api_key == "") return;
-  const testing = false;
-  const { 
-    days,
-    location, 
-    country, 
-    icon, 
-    temp, 
-    desc, 
-    lat, 
-    lon, 
-    wdata 
-  } = await fetchAllData(testing, units, _location, api_key, lang_abbr);
-  await updateDisplays(location, country, icon, temp, desc, units, days);
-  displayStormEffects(wdata);
+  if (api_key !== "") {
+    const testing = false;
+    const { 
+      days,
+      location, 
+      country, 
+      icon, 
+      temp, 
+      desc, 
+      lat, 
+      lon, 
+      wdata 
+    } = await fetchAllData(testing, units, _location, api_key, lang_abbr);
+    await updateDisplays(location, country, icon, temp, desc, units, days);
+    displayStormEffects(wdata);
+  }
   translate(root.LANG);
 }
 
