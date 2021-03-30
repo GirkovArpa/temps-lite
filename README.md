@@ -49,7 +49,7 @@ Compiling with Rust is fairly straightforward:
 ```sh
 cargo build --release
 ```
-When running, the folder [locale](locale) must be in the same folder as the executable, and the [Sciter](https://github.com/c-smile/sciter-sdk/) library from either `bin.win`, `bin.lnx`, or `bin.osx` must be in the folder as well, or in your `PATH`.
+When running, the folder [locale](locale) must be in the same folder as the executable, and the [Sciter](https://github.com/c-smile/sciter-sdk/tree/4b1a855f58e47f1677b28c0d8e9a17b6b448b3af) library from either `bin.win`, `bin.lnx`, or `bin.osx` must be in the folder as well, or in your `PATH`.
 
 ## Location
 
