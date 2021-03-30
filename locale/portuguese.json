@@ -1,0 +1,79 @@
+{
+  "ABBR": "pt",
+  "unknown": "Desconhcido",
+  "day, month ?": "dia, mês ?",
+  "city, country": "cidade, país",
+  "day": "dia",
+  "City": "Cidade",
+  "API Key": "Chave de API",
+  "You need a free api key from <a href='https://www.openweathermap.org/'>openweathermap.</a>": "Você precisa de uma chave de API gratuita de <a href='https://www.openweathermap.org/'>openweathermap.</a>",
+  "Temperature scale": "Escala de Temperatura",
+  "Show weather in menu bar": "Mostrar o tempo na barra de menu",
+  "Start at login": "Iniciar ao logar",
+  "Time format": "Formato de hora",
+  "24h": "24h",
+  "12h": "12h",
+  "Apply": "Aplicar",
+  "Quit": "Sair",
+  "Language": "Língua",
+  "English": "Inglês",
+  "Spanish": "Espanhol",
+  "German" : "Alemão",
+  "French" : "Francês",
+  "Dutch" : "Holandês",
+  "Italian": "Italiano",
+  "Portuguese": "Português",
+  "CURRENT-DATE-FORMAT": "WEEKDAY, MONTH DAY",
+  "DATES": {
+    "months": {
+      "short": {
+        "jan": "jan",
+        "feb": "fev",
+        "mar": "mar",
+        "apr": "abr",
+        "may": "mai",
+        "jun": "jun",
+        "jul": "jul",
+        "aug": "ago",
+        "sep": "set",
+        "oct": "out",
+        "nov": "nov",
+        "dec": "dez"
+      },
+      "long": {
+        "january": "janeiro",
+        "february": "fevereiro",
+        "march": "março",
+        "april": "abril",
+        "may": "maio",
+        "june": "junho",
+        "july": "julho",
+        "august": "agosto",
+        "september": "setembro",
+        "october": "outubro",
+        "november": "novembro",
+        "december": "dezembro"
+      }
+    },
+    "weekdays": {
+      "short": {
+        "mon": "seg",
+        "thu": "qui",
+        "sun": "dom",
+        "tue": "ter",
+        "fri": "sex",
+        "wed": "qua",
+        "sat": "sáb"
+      },
+      "long": {
+        "monday": "segunda",
+        "thursday": "quinta",
+        "sunday": "domingo",
+        "tuesday": "terça",
+        "friday": "sexta",
+        "wednesday": "quarta",
+        "saturday": "sábado"
+      }
+    }
+  }
+}
