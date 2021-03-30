@@ -6,10 +6,8 @@ temps-lite
 <br/>
 </h1>
 
-<h4 align="center">A simple but smart weather app.</h4>
+<h4 align="center">A smart, good-looking little app which tries to speak your language the way you are used to.</h4>
 <h5 align="center"></h5>
-
-> temps-lite is a modern and minimal application based on Sciter with actual weather information and forecast for Windows, Mac and Linux.
 
 <h1 align="center">
 <img src="preview.gif" alt="temps-lite" width="280"/></a><br/><br/>
