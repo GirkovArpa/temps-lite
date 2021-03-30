@@ -32,6 +32,7 @@ temps-lite
 - [x] French
 - [x] German
 - [x] Italian
+- [x] Portuguese (BR)
 - [x] Spanish
 
 ## Todo 📋
