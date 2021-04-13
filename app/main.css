@@ -28,6 +28,7 @@ body:hover > #draggable {
 }
 
 #draggable {
+  cursor: move;
   transition: opacity quad-in-out 0.2s;
   z-index: 100;
   color: white;

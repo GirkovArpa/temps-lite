@@ -1,6 +1,9 @@
 const DEBUGGING = false; 
 DEBUGGING && view.connectToInspector && view.connectToInspector(rootElement, inspectorIpAddress);
 
+include "movableView.tis";
+movableView("#draggable");
+
 $(#quit) << event click {
   view.close();
 }

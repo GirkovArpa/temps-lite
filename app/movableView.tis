@@ -1,0 +1,69 @@
+//| Movable View v1.3.0
+//| https://github.com/MustafaHi/Sciter-MovableView
+
+// Call movableView('selector', true|false);
+
+function movableView(s, screenBound = false)
+{
+  var xoff,yoff, minXY, maxX, maxY;
+  var dragging = false;
+  
+  function doDrag() { while( dragging ) view.doEvent(); }
+
+  function screenBounds()
+  {
+    if (screenBound)
+    {
+      (maxX, maxY) = view.screenBox(#workarea, #dimension);
+      var (w, h)   = view.box(#dimension, #border);
+      maxX -= w;
+      maxY -= h;
+      minXY = 0;
+    }
+    else
+    {
+      (maxX, maxY) = Integer.MAX;
+             minXY = Integer.MIN;
+    }
+  }
+    
+  function onMouseDown(e)
+  {
+    if(!e.target.$is({s}) ) { return false; }
+
+    screenBounds();
+    e.target.capture(true);
+
+    var (x,y) = view.box(#position, #border, #screen);
+    xoff = e.xScreen - x; yoff = e.yScreen - y;
+
+    dragging = true;
+    doDrag();
+  }
+  
+  function onMouseMove(e)
+  {
+    if(dragging)
+    {
+      view.move( (e.xScreen - xoff).limit(minXY, maxX), (e.yScreen - yoff).limit(minXY, maxY), false );
+    }
+  }
+    
+  function onMouseUp(e)
+  {
+    if(dragging)
+    {
+      dragging = false;
+      e.target.capture(false);
+    }
+  }
+    
+    const elements = $$({s});
+    for(var i=0; i<elements.length; ++i) {
+      elements[i].subscribe(onMouseDown, Event.MOUSE, Event.MOUSE_DOWN );
+      elements[i].subscribe(onMouseUp,   Event.MOUSE, Event.MOUSE_UP   );
+      elements[i].subscribe(onMouseMove, Event.MOUSE, Event.MOUSE_MOVE );
+    }
+  return elements.length ? true : false;
+}
+
