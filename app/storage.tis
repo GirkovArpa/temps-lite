@@ -1,6 +1,6 @@
 const initDatabase = function(storage) {
   storage.root = {
-    VERSION: "2.2.0",
+    VERSION: "2.2.1",
     LOCATION: "New York",
     UNITS: "imperial",
     TIME_FORMAT: "12h",

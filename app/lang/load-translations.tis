@@ -1,7 +1,7 @@
 var LANGUAGES_LOADED = false;
 const TRANSLATIONS = { list: [] };
 
-async function loadLanguages() {
+function loadLanguages() {
   const json = parseData(Stream.openFile("locale/list.json", "ru"));
   json.sort();
   for (var language in json) {

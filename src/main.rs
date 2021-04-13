@@ -37,7 +37,7 @@ impl sciter::EventHandler for EventHandler {
 
 fn main() {
     // allows CTRL+SHIFT+I to connect to inspector.exe
-    sciter::set_options(sciter::RuntimeOptions::DebugMode(true)).unwrap();
+    sciter::set_options(sciter::RuntimeOptions::DebugMode(false)).unwrap();
     let archived = include_bytes!("../target/assets.rc");
     sciter::set_options(sciter::RuntimeOptions::ScriptFeatures(
         sciter::SCRIPT_RUNTIME_FEATURES::ALLOW_SYSINFO  as u8 |

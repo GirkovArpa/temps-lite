@@ -1,14 +1,14 @@
-@font-face {
-  font-family: 'Rubik';
-  src: url('assets/fonts/rubik/Rubik Regular 400.ttf');
-}
-
-@font-face {
-  font-family: 'Rubik Light';
-  src: url('assets/fonts/rubik/Rubik Light 300.ttf');
-}
-
-@font-face {
-  font-family: 'Rubik Bold';
-  src: url('assets/fonts/rubik/Rubik Bold 700.ttf');
+@media platform != "Linux" {
+  @font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/rubik/Rubik Regular 400.ttf');
+  }
+  @font-face {
+    font-family: 'Rubik Light';
+    src: url('assets/fonts/rubik/Rubik Light 300.ttf');
+  }
+  @font-face {
+    font-family: 'Rubik Bold';
+    src: url('assets/fonts/rubik/Rubik Bold 700.ttf');
+  }
 }
