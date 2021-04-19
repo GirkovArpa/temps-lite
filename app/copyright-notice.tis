@@ -3,3 +3,9 @@ $(#sciter-link) << event click {
   Sciter.launch(href);
   return true;
 } 
+
+$(#terra-informatica-link) << event click {
+  const href = this.attributes["href"];
+  Sciter.launch(href);
+  return true;
+}

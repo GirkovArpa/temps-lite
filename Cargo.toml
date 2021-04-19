@@ -1,6 +1,6 @@
 [package]
 name = "temps-lite"
-version = "2.2.2"
+version = "2.3.2"
 authors = ["GirkovArpa <girkovarpa@protonmail.com>"]
 edition = "2018"
 
@@ -20,7 +20,7 @@ OriginalFilename = "temps-lite.exe"
 LegalCopyright = "Copyright © GirkovArpa 2021"
 FileDescription = "temps-lite: A smart, good-looking little weather app"
 ProductName = "temps-lite"
-ProductVersion = "2.2.2"
+ProductVersion = "2.3.2"
 
 [profile.release]
 opt-level = "z"  # Optimize for size.
