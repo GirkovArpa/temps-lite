@@ -1,6 +1,6 @@
 const initDatabase = function(storage) {
   storage.root = {
-    VERSION: "2.3.2",
+    VERSION: "2.3.3",
     LOCATION: "New York",
     UNITS: "imperial",
     TIME_FORMAT: "12h",
@@ -12,7 +12,7 @@ const initDatabase = function(storage) {
   return storage.root;
 }
 
-const storage = Storage.open("database.bin");
+const storage = Storage.open(System.home("database.bin"));
 const root = storage.root || initDatabase(storage);
 // backwards compatibility
 if (storage.root.LANG == undefined) {
