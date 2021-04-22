@@ -20,7 +20,7 @@ async function manageAutoStart(checked) {
       //debug info: this.state.checked;
       if(checked) {
         const appName = "temps-lite";
-        const appPath = URL.toPath( System.home(String.$(./{appName}) );
+        const appPath = URL.toPath( System.home(String.$(./{appName})) );
         const data = String.$([Desktop Entry]
             Type=Application
             Version=1.0
